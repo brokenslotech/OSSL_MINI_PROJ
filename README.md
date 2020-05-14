@@ -4,10 +4,10 @@ The proposed purpose of the program was to create a member management system of 
 
 ## Functions
 
--**Create: Create a new data record from a data file or standard input. 
--**Read: Print a record, multiple records, or all records to standard output. 
--**Update: Update a specific field of a record, multiple, or all records. 
--**Delete: Delete a record, multiple, or all records. 
+- **Create: Create a new data record from a data file or standard input. 
+- **Read: Print a record, multiple records, or all records to standard output. 
+- **Update: Update a specific field of a record, multiple, or all records. 
+- **Delete: Delete a record, multiple, or all records. 
 
 ## Member Parameters 
 
