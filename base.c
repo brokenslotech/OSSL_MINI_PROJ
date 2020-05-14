@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 #include "base.h"
 
 // Function: print_all_records()
@@ -303,4 +304,39 @@ void delete_all_records(Record records[]){
 
 }
 
+void delete_m_or_f(Record records[]){
+  char choice;
+  char male = 'M';
+  char female = 'F';
+  int i = 0;
 
+  while(1){
+    printf("Which gender do you want to delete?(M or F): ");
+    scanf("%c", &choice);
+    choice = toupper((char) choice);
+    while ((getchar()) != '\n');
+    if(choice == male){
+      //printf("All Male records will be deleted!\n");
+      break;
+    } else if(choice == female){
+      //printf("All Female records will be deleted!\n");
+      break;
+    } else{
+      printf("Wrong input please try again!\n");
+    }
+  }
+  
+  for(int i = 0; i < 1000; i++){
+    if(records[i].id != 0 && records[i].gender[0] == choice){
+      records[i].id = 0;
+    } else{
+      continue;
+    }
+  }
+
+  if(choice == male){
+    printf("All Male records are deleted!\n\n");
+  } else if(choice == female){
+    printf("All Female records are deleted!\n\n");
+  }
+}

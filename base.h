@@ -13,5 +13,6 @@ void read_from_record(Record[]);
 void update_a_record(Record[]);
 void delete_a_record(Record[]);
 void delete_all_records(Record[]);
+void delete_m_or_f(Record[]);
 
 #endif
