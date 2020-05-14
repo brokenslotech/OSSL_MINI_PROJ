@@ -66,6 +66,8 @@ void input_handler(char input[], Record records[]){
 		defragment(records);
 	else if(!strcmp(input, "11"))
 		display_stats(records);	
+  else if(!strcmp(input, "12"))
+    delete_m_or_f(records);
 	else if(!strcmp(input, "99"))
 		printf("Terminating... bye!\n"); // Quit - no operation (an empty statement with a semi-colon)
 	else
@@ -81,7 +83,6 @@ void input_handler(char input[], Record records[]){
 void display_menu(){
 
 	// TODO: Modify this function as you need
-
 	printf("******************************\n");
 	printf(" Membership management system \n");
 	printf("******************************\n");
@@ -96,5 +97,6 @@ void display_menu(){
   printf(" 9. Delete all members\n");
 	printf(" 10. Optimize (defragment) the records\n");
 	printf(" 11. Member statistics\n");
+  printf(" 12. Delete with condition\n");
 	printf(" 99. Quit\n");
 }
